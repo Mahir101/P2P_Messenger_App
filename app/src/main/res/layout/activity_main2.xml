@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_activity_id_2"
+    android:background="@drawable/background_activity_2"
+
+    tools:context=".Main2Activity">
+
+    <EditText
+        android:id="@+id/targetPortEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Target Port"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/targetIPEditText"
+        app:layout_constraintTop_toBottomOf="@+id/targetIPEditText"
+        app:layout_constraintVertical_bias="0.242" />
+
+
+    <EditText
+        android:id="@+id/receiveEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Receive Port Number"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/receivingPortText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+
+    <EditText
+        android:id="@+id/HostIPAddressText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="IP Address"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/serverButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/receiveEditText"
+        app:layout_constraintTop_toBottomOf="@+id/receiveEditText"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="User Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/serverButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/receiveEditText"
+        app:layout_constraintTop_toBottomOf="@+id/receiveEditText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/targetIPEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Target IP Address"
+        android:inputType="textPersonName"
+        android:text="10.100.170."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/receiveEditText"
+        app:layout_constraintTop_toBottomOf="@+id/serverButton"
+        app:layout_constraintVertical_bias="0.127" />
+
+
+    <Button
+        android:id="@+id/serverButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/startserver"
+        android:onClick="onServerClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiveEditText"
+        app:layout_constraintVertical_bias="0.376" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/connect"
+        android:onClick="onConnectClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetPortEditText"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TextView
+        android:id="@+id/receivingPortText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Host Port No."
+        app:layout_constraintBottom_toBottomOf="@+id/receiveEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/receiveEditText"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <TextView
+        android:id="@+id/HostIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Host IP Address"
+        app:layout_constraintBottom_toBottomOf="@+id/HostIPAddressText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/HostIPAddressText"
+        app:layout_constraintVertical_bias="0.619" />
+
+    <TextView
+        android:id="@+id/userTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="User Name"
+        app:layout_constraintBottom_toBottomOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/username"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/username"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/targetIPText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target IP"
+        app:layout_constraintBottom_toBottomOf="@+id/targetIPEditText"
+        app:layout_constraintEnd_toStartOf="@+id/targetIPEditText"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverButton"
+        app:layout_constraintVertical_bias="0.912" />
+
+
+
+    <TextView
+        android:id="@+id/targetPortText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target Port No."
+        app:layout_constraintBottom_toTopOf="@+id/connectButton"
+        app:layout_constraintEnd_toStartOf="@+id/targetPortEditText"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetIPText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="192dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/receiveEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/p2p_in_app" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/changeBackground"
+        android:title="Change Background"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item android:id="@+id/background1"
+                android:title="Background 1" />
+
+            <item android:id="@+id/background2"
+                android:title="Background 2" />
+
+            <item android:id="@+id/background3"
+                android:title="Background 3" />
+
+
+        </menu>
+
+    </item>
+
+
+
+    <item android:id="@+id/changeChatColor"
+        android:title="Change Chat Color"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item android:id="@+id/blue"
+                android:title="Blue" />
+
+            <item android:id="@+id/red"
+                android:title="Red" />
+
+            <item android:id="@+id/green"
+                android:title="Green" />
+
+
+        </menu>
+
+    </item>
+
+
+
+</menu>
